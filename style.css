@@ -1,50 +1,45 @@
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #504150;
+    background-color: #bc9d6e;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    
+    color: #e0e0e0;
 }
 
-h1{
-    color: #d1d1d1 !important;;
+h1 {
+    color: #f0e6d2 !important;
 }
 
-h3{
-    margin: 7px;
+h3 {
+    margin: 0.5em;
 }
 
-td{
-    min-width: 80px;
-    color: #bd9f78;
+td {
+    min-width: 5em;
+    color: #8b7d4e;
 }
 
-th{
-    color: #bd9f78;
+th {
+    color: #8b7d4e;
 }
 
-input{
-    background-color: #30271d;
-    color: #bd9f78;
+input, select {
+    background-color: #3c2f29;
+    color: #d1bb7c;
     font-weight: bold;
     text-align: center;
-}
-
-select{
-    min-width: 60px;
-    background-color: #30271d;
-    color: #bd9f78;
-    font-weight: bold;
-    justify-content: left !important;
-    text-align: left !important;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
 }
 
 .container {
     display: flex;
     width: 100%;
     height: 100%;
+    padding: 1.25em;
 }
 
 .file-selector {
@@ -53,11 +48,10 @@ select{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    background-color: #f2e1c1;
+    padding: 1.25em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    border-radius: 0.75em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,26 +64,8 @@ select{
     visibility: hidden;
 }
 
-.hidden{
+.hidden {
     display: none;
-}
-
-.left-panel {
-    width: 250px;
-    background: #333;
-    color: #ffffffcb;
-    padding: 20px 0;
-    height: 100vh;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(-100%);
-    display: flex;
-    flex-direction: column;
-}
-
-.left-panel.visible {
-    transform: translateX(0);
 }
 
 .competition-list {
@@ -99,7 +75,7 @@ select{
 
 .main-panel {
     flex: 1;
-    padding: 20px;
+    padding: 1.25em;
     overflow-y: auto;
     display: none;
     transition: margin-left 0.5s ease-in-out;
@@ -110,94 +86,93 @@ select{
 }
 
 .level-container {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 .level-header {
     cursor: pointer;
-    padding: 10px;
-    background: #444;
-    border: 1px solid #555;
-    margin: 0;
+    padding: 0.625em;
+    background: #2a2a2a;
+    border: 0.0625em solid #444;
+    border-radius: 0.375em;
 }
 
 .level-list {
-    list-style-type: none; /* Remove bullets from list items */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .level-list li {
-    padding: 5px 10px;
+    padding: 0.3125em 0.625em;
     cursor: pointer;
-    border-bottom: 1px solid #444;
+    border-bottom: 0.0625em solid #444;
 }
 
 .level-list li:hover {
-    background: #555;
+    background: #333;
 }
 
 h2 {
-    padding-left: 3px; 
-    margin-top: 12px;
-    margin-bottom: 7px;
+    padding-left: 0.1875em;
+    margin: 0.75em 0 0.4375em;
 }
 
 .level-0 {
-    border-radius: 7px;
-    margin-right: 7px;
-    padding-left: 3px; 
-    background-color: #504f4f;
+    border-radius: 0.4375em;
+    margin-right: 0.4375em;
+    padding-left: 0.1875em;
+    background-color: #3a3a3a;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .level-1 {
-    padding-left: 5px !important; 
-    background-color: #4B0000; /* Dark Red */
-    font-size: 16px;
-    border-radius: 7px;
-    margin-right: 7px;
+    padding-left: 0.3125em !important;
+    background-color: #850e00;
+    font-size: 1em;
+    border-radius: 0.4375em;
+    margin-right: 0.4375em;
 }
 
 .level-2 {
-    padding-left: 7px !important; 
-    background-color: #004B00; /* Dark Green */
-    font-size: 14px;
-    border-radius: 7px;
-    margin-right: 7px;
+    padding-left: 0.4375em !important;
+    background-color: #005600;
+    font-size: 0.875em;
+    border-radius: 0.4375em;
+    margin-right: 0.4375em;
 }
 
 .level-3 {
-    padding-left: 12px !important; 
-    background-color: #00004B; /* Dark Blue */
-    font-size: 14px;
-    border-radius: 7px;
-    margin-right: 7px;
+    padding-left: 0.75em !important;
+    background-color: #000033;
+    font-size: 0.875em;
+    border-radius: 0.4375em;
+    margin-right: 0.4375em;
 }
 
 .level-4 {
-    padding-left: 17px !important; 
-    background-color: #4B4B00; /* Dark Yellow */
-    font-size: 12px;
-    border-radius: 7px;
-    margin-right: 7px;
+    padding-left: 1.0625em !important;
+    background-color: #4b4b00;
+    font-size: 0.75em;
+    border-radius: 0.4375em;
+    margin-right: 0.4375em;
 }
 
 .level-5 {
-    padding-left: 23px !important; 
-    background-color: #4B004B; /* Dark Purple */
-    font-size: 12px;
-    border-radius: 7px;
-    margin-right: 7px;
+    padding-left: 1.4375em !important;
+    background-color: #5e004b;
+    font-size: 0.75em;
+    border-radius: 0.4375em;
+    margin-right: 0.4375em;
 }
 
 .level-6 {
-    padding-left: 27px !important; 
-    background-color: #5a544b; /* Dark Purple */
-    font-size: 11px;
-    border-radius: 7px;
-    margin-right: 7px;
+    padding-left: 1.6875em !important;
+    background-color: #4a3d33;
+    font-size: 0.6875em;
+    border-radius: 0.4375em;
+    margin-right: 0.4375em;
 }
 
 ul, li {
@@ -206,145 +181,139 @@ ul, li {
     margin: 0;
 }
 
-/* Main panel divs for different levels */
 .level-0-content {
-    background-color: #504f4f;
-    color: #cac6c6
+    background-color: #3a3a3a;
+    color: #d0d0d0;
 }
 
 .level-1-content {
-    background-color: #4B0000; /* Dark Red */
-    color: #cac6c6
+    background-color: #850e00;
+    color: #d0d0d0;
 }
 
 .level-2-content {
-    background-color: #004B00; /* Dark Green */
-    color: #cac6c6
+    background-color: #005600;
+    color: #d0d0d0;
 }
 
 .level-3-content {
-    background-color: #00004B; /* Dark Blue */
-    color: #cac6c6
+    background-color: #000033;
+    color: #d0d0d0;
 }
 
 .level-4-content {
-    background-color: #4B4B00; /* Dark Yellow */
-    color: #cac6c6
+    background-color: #4b4b00;
+    color: #d0d0d0;
 }
 
 .level-5-content {
-    background-color: #4B004B; /* Dark Purple */
-    color: #cac6c6
+    background-color: #5e004b;
+    color: #d0d0d0;
 }
 
 .level-6-content {
-    background-color: #504a42; /* Dark Purple */
-    color: #cac6c6
+    background-color: #4a3d33;
+    color: #d0d0d0;
 }
 
-.toggle-button{
-    background-color: #615d5d;
+.toggle-button {
+    background-color: #4b4033;
     color: white;
-    border-radius: 7px;
+    border-radius: 0.4375em;
     cursor: pointer;
-    box-shadow: none; /* Remove shadow */
+    box-shadow: none;
 }
 
-#mainheader{
+#mainheader {
     color: white;
 }
 
-/* Styles for window-tables */
 .window-tables {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 12px;
-    font-size: 12px;
+    margin-bottom: 0.75em;
+    font-size: 0.75em;
 }
 
 .window-tables th, .window-tables td {
-    background-color: #777171;
-    border: 1px solid #777171;
-    text-align: left; /* Ensure consistent text alignment */
+    background-color: #6b5f4d;
+    border: 0.0625em solid #6b5f4d;
+    text-align: left;
 }
 
 .window-tables th {
-    background-color: #535050;
+    background-color: #4e453a;
     text-align: left;
 }
 
 .window-tables tr:nth-child(even) {
-    background-color: #535050;
+    background-color: #4e453a;
 }
 
 .window-tables tr:hover {
-    background-color: #535050;
+    background-color: #4e453a;
 }
 
-/* Additional styling for better readability */
 .window-tables td {
-    background-color: #535050;
-    color: #bd9f78;
-    padding-left: 3px;
-    padding-right: 5px;
+    background-color: #4e453a;
+    color: #d1bb7c;
+    padding-left: 0.1875em;
+    padding-right: 0.3125em;
 }
 
 .tablevalue {
     text-align: center;
-    width: 100%; /* Full width to fit the cell */
+    width: 100%;
 }
 
 .tablevalue-input {
     text-align: center;
-    width: 100%; /* Full width to fit the cell */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .window-tables tr td:first-child {
     font-weight: bold;
-    background-color: #535050;
+    background-color: #4e453a;
 }
 
 .standard-div h2 {
     margin-top: 0;
-    font-size: 18px;
-    text-align:center;
+    font-size: 1.125em;
+    text-align: center;
 }
 
-.standard-div{
-    margin-bottom: 12px;
+.standard-div {
+    margin-bottom: 0.75em;
     height: 50%;
 }
 
 .create-button {
-    margin-top: 12px;
+    margin-top: 0.75em;
 }
 
-/* Styles for windowcontainer */
 #windowcontainer {
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-/* Styles for left and right divs */
 .window-left, .window-right {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #504e4e;
+    padding: 0.625em;
+    border: 0.0625em solid #2f2a2a;
     height: 85%;
 }
 
-.groupedtables{
-    margin-bottom:7px;
-    border-radius: 7px;
-    border:2px solid #635f5f
+.groupedtables {
+    margin-bottom: 0.4375em;
+    border-radius: 0.4375em;
+    border: 0.125em solid #6c5d5d;
 }
 
-
 .groupedtables th, .groupedtables td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 0.0625em solid #ddd;
+    padding: 0.5em;
     text-align: left;
 }
 
@@ -352,23 +321,23 @@ ul, li {
     width: 100%;
 }
 
-.task-container{
-    border: 2px solid grey;
-    border-radius: 7px;
-    margin-bottom: 7px;
-    padding: 3px;
+.task-container {
+    border: 0.125em solid grey;
+    border-radius: 0.4375em;
+    margin-bottom: 0.4375em;
+    padding: 0.1875em;
 }
 
 .task-row {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125em;
     width: 100%;
 }
 
 .task-left {
     width: 35%;
-    padding-right: 5px;
+    padding-right: 0.3125em;
 }
 
 .task-right {
@@ -378,7 +347,7 @@ ul, li {
 
 .task-cell {
     flex: 1;
-    margin-right: 5px;
+    margin-right: 0.3125em;
 }
 
 .task-cell:last-child {
@@ -391,17 +360,17 @@ ul, li {
 
 .input {
     min-width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    box-sizing: border-box;
 }
 
 .message-modal {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px 20px;
+    top: 0.625em;
+    right: 0.625em;
+    padding: 0.625em 1.25em;
     color: #bbbbbb;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3125em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
     opacity: 1;
     transform: translateY(0);
     transition: opacity 1s ease, transform 1s ease;
@@ -418,19 +387,19 @@ ul, li {
 
 .message-modal.fade-out {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-1.25em);
 }
 
-.file-selector{
+.file-selector {
     background-color: #d4c09b;
     color: #36463d;
 }
 
-#fileSelect{
+#fileSelect {
     background-color: #30271d;
     color: #bd9f78;
     font-weight: bold;
-    text-align: center;   
+    text-align: center;
 }
 
 input[type="file"] {
@@ -439,117 +408,197 @@ input[type="file"] {
     z-index: -1;
 }
 
-/* Style the custom label as a button */
 .custom-file-upload {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 0.5em 0.75em;
     cursor: pointer;
     background-color: #30271d;
     color: #bd9f78;
-    font-weight: bold;
-    text-align: center;   
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 0.3125em;
+    box-shadow: 0.125em 0.125em 0.625em rgba(0, 0, 0, 0.3);
 }
 
-/* Optionally, add hover and active states */
 .custom-file-upload:hover {
-    background-color: #5B2C6F; /* Darker shade on hover */
+    background-color: #473b2d;
 }
 
-.custom-file-upload:active {
-    background-color: #4A235A; /* Even darker shade on click */
+.checkbox-option {
+    font-weight: bold;
+    margin-right: 0.75em;
 }
 
-#helper-text{
-    text-align: left;
+.checkbox-container {
+    margin-bottom: 0.3125em;
 }
 
-.competition-item {
+.checkbox-label {
     cursor: pointer;
-}
-
-.competition-item input {
-    border: none;
-    background: none;
-    font: inherit;
-    width: 100%;
-}
-
-.delete-button {
-    cursor: pointer;
-    color: red;
-    margin-left: 10px;
-    display: none;
-}
-
-.competition-div{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    height: 50%;
-}
-
-.competition-item:hover .delete-button {
-    display: inline;
-}
-
-.confederations-container {
-    width: 48%; /* Adjust as necessary */
-    
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.round-control, .entry-control {
-    display: inline-block;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.round-controls {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.round-control:hover, .entry-control:hover {
-    color: #7c7c5a;
-    font-weight:bold;
-}
-
-.round-control:active, .entry-control:active {
-    color: #7c7c5a;
-}
-
-.download-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px; /* Adjust the size as necessary */
-    color:rgb(199, 200, 218)
-}
-
-.download-button:hover {
-    color: #6a7886; /* Change color on hover */
-    
-}
-
-.competition-item {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.competition-item input {
-    width: 100px; /* Adjust width as needed */
+.download-button {
+    background-color: #5e4a3e;
+    color: #e0e0e0;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1em;
+    transition: background-color 0.3s ease;
 }
 
-.competition-item .delete-button {
-    margin-left: 10px; /* Space between input and delete button */
+.download-button:hover {
+    background-color: #4a3d2f;
 }
+
+.file-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f2e1c1;
+    padding: 1.25em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    border-radius: 0.75em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.file-selector.hidden {
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.left-panel {
+    width: 15%;
+    background: #1a1a1a;
+    color: #e2e2e2;
+    padding: 1.25em;
+    height: 100vh;
+    position: relative ;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel.visible {
+    animation: slideIn 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+@keyframes slideMainPanel {
+    0% {
+        margin-left: -100%;
+    }
+    100% {
+        margin-left: 1;
+    }
+}
+
+.main-panel {
+    flex: 1;
+    padding: 1.25em;
+    overflow-y: auto;
+    display: none;
+    transition: margin-left 0.5s ease-in-out;
+}
+
+.main-panel.visible {
+    display: block;
+    animation: slideMainPanel 0.5s ease-in-out;
+}
+
+.level-list li:hover {
+    background: #333;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-button:hover {
+    background-color: #3c2f29;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.window-tables tr:hover {
+    background-color: #4e453a;
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+.message-modal.fade-out {
+    opacity: 0;
+    transform: translateY(-1.25em);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+input[type="text"]:hover, select:hover {
+    background-color: #4b4033;
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-button {
+    background-color: #5e4a3e;
+    color: #e0e0e0;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #4a3d2f;
+    transform: scale(1.1);
+}
+
+.toggle-button {
+    background-color: #4b4033;
+    color: white;
+    border-radius: 0.4375em;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #3c2f29;
+    transform: scale(1.05);
+}
+
+.standard-div {
+    margin-bottom: 0.75em;
+    height: 50%;
+}
+a {
+    color: #4b8cbf; /* A soft, muted blue */
+    text-decoration: none;
+    position: relative;
+}
+
+
+
