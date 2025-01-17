@@ -68,5 +68,3 @@ function updateStandingsData(id, numberOfTeams) {
         return a.id - b.id;
     });
 }
-
-
