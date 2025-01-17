@@ -24,7 +24,32 @@ async function download() {
     zip.file(jsonFileName, jsonDataBlob);
 
     // Generate the ZIP file and trigger the download
-    const content = await zip.generateAsync({ type: 'blob' });
+// Generate the ZIP file and trigger the download
+const content = await zip.generateAsync({ type: 'blob' });
+
+if (window.showSaveFilePicker) {
+    // Modern browsers supporting the File System Access API
+    const options = {
+        suggestedName: `scyppan-${datetimeString}-compdata.zip`,
+        types: [
+            {
+                description: 'ZIP Files',
+                accept: { 'application/zip': ['.zip'] }
+            }
+        ]
+    };
+    
+    try {
+        const handle = await showSaveFilePicker(options);
+        const writableStream = await handle.createWritable();
+        await writableStream.write(content);
+        await writableStream.close();
+        alert('File successfully saved!');
+    } catch (err) {
+        console.error('Save canceled or failed:', err);
+    }
+} else {
+    // Fallback for browsers that don't support showSaveFilePicker
     const link = document.createElement('a');
     link.href = URL.createObjectURL(content);
     link.download = `scyppan-${datetimeString}-compdata.zip`;
@@ -32,6 +57,8 @@ async function download() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+}
+
 }
 
 function exportCompobjData() {
